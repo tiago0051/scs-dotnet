@@ -22,5 +22,125 @@ namespace Sistema_Caixa_Seguro.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string idetificacaoCliente {
+            get {
+                return ((string)(this["idetificacaoCliente"]));
+            }
+            set {
+                this["idetificacaoCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string senhaCliente {
+            get {
+                return ((string)(this["senhaCliente"]));
+            }
+            set {
+                this["senhaCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("01/01/0001 01:01:00")]
+        public global::System.DateTime dataVencimentoCliente {
+            get {
+                return ((global::System.DateTime)(this["dataVencimentoCliente"]));
+            }
+            set {
+                this["dataVencimentoCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bancoLocal {
+            get {
+                return ((string)(this["bancoLocal"]));
+            }
+            set {
+                this["bancoLocal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bancoExterno {
+            get {
+                return ((string)(this["bancoExterno"]));
+            }
+            set {
+                this["bancoExterno"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string idCliente {
+            get {
+                return ((string)(this["idCliente"]));
+            }
+            set {
+                this["idCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string nomeCliente {
+            get {
+                return ((string)(this["nomeCliente"]));
+            }
+            set {
+                this["nomeCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string telCliente {
+            get {
+                return ((string)(this["telCliente"]));
+            }
+            set {
+                this["telCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string emailCliente {
+            get {
+                return ((string)(this["emailCliente"]));
+            }
+            set {
+                this["emailCliente"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string nomeEmpresa {
+            get {
+                return ((string)(this["nomeEmpresa"]));
+            }
+            set {
+                this["nomeEmpresa"] = value;
+            }
+        }
     }
 }

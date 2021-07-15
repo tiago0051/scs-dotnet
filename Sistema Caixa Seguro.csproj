@@ -16,17 +16,23 @@
   <ItemGroup>
     <None Remove="Ativo 1.png" />
     <None Remove="Classes\NewFile1.txt" />
+    <None Remove="Windows\logo.png" />
+    <None Remove="Windows\Prancheta 1.png" />
     <None Remove="Windows\SCS %28logo%29.png" />
+    <None Remove="Windows\Untitled-1.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.8" />
     <PackageReference Include="MySql.Data" Version="8.0.25" />
+    <PackageReference Include="SendGrid" Version="9.24.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="images\loginWindow\Ativo 1.png" />
     <Resource Include="images\SCS %28logo%29.png" />
+    <Resource Include="Windows\logo.png" />
+    <Resource Include="Windows\Prancheta 1.png" />
+    <Resource Include="Windows\Untitled-1.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +60,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="images\loginWindow\" />
   </ItemGroup>
 
 </Project>
