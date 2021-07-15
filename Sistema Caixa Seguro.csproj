@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <None Remove="Ativo 1.png" />
+    <None Remove="Classes\NewFile1.txt" />
     <None Remove="Windows\SCS %28logo%29.png" />
   </ItemGroup>
 
