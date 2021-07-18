@@ -9,7 +9,14 @@ namespace Sistema_Caixa_Seguro
 {
     class Util
     {
+        public static Classes.Models.Funcionario FuncionarioLogado = null;
+
         private static readonly String keySendGrid = "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";
+
+        public static bool CheckFuncionarioIsLoged()
+        {
+            return FuncionarioLogado != null;
+        }
 
         private static MySqlConnection OpenConnectionMySql()
         {
@@ -32,12 +39,19 @@ namespace Sistema_Caixa_Seguro
             {
                 MySqlConnection connection = OpenConnectionMySql();
 
-                MySqlCommand cmd = connection.CreateCommand();
-                cmd.CommandText = command;
+                if(connection != null)
+                {
+                    MySqlCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = command;
 
-                var reader = cmd.ExecuteReader();
+                    var reader = cmd.ExecuteReader();
 
-                return new Object[] { connection, reader };
+                    return new Object[] { connection, reader };
+                }
+                else
+                {
+
+                }return null;
             }
             catch (Exception ex)
             {

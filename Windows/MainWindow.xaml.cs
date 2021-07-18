@@ -26,6 +26,9 @@ namespace Sistema_Caixa_Seguro.Windows
         {
             this.Hide();
             new LoadingWindow().ShowDialog();
+
+            new Funcionario.LoginFuncionarioWindow().ShowDialog();
+
             this.Show();
         }
 

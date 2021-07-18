@@ -11,11 +11,14 @@
     <Company>DevSoft BR</Company>
     <Description>Sistema de automação para lojas</Description>
     <Copyright>DevSoft BR</Copyright>
+    <ApplicationIcon>Ativo-1.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Ativo 1.png" />
     <None Remove="Classes\NewFile1.txt" />
+    <None Remove="Windows\Inicio\Prancheta 1.png" />
+    <None Remove="Windows\Inicio\Untitled-1.png" />
     <None Remove="Windows\logo.png" />
     <None Remove="Windows\Prancheta 1.png" />
     <None Remove="Windows\SCS %28logo%29.png" />
@@ -29,10 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="images\SCS %28logo%29.png" />
-    <Resource Include="Windows\logo.png" />
-    <Resource Include="Windows\Prancheta 1.png" />
-    <Resource Include="Windows\Untitled-1.png" />
+    <Resource Include="Windows\Inicio\logo.png" />
+    <Resource Include="Windows\Inicio\Prancheta 1.png" />
+    <Resource Include="Windows\Inicio\Untitled-1.png" />
   </ItemGroup>
 
   <ItemGroup>

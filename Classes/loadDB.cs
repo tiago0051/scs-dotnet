@@ -93,5 +93,54 @@ namespace Sistema_Caixa_Seguro.Classes
 
             cmd.Connection.Close();
         }
+    
+        public static void Fornecedor()
+        {
+            String command = "CREATE TABLE IF NOT EXISTS `Fornecedor` (" +
+              "`idFornecedor` INTEGER NOT NULL UNIQUE," +
+              "`NomeFornecedor` TEXT NOT NULL," +
+              "`NomeContatoFornecedor` TEXT NOT NULL," +
+              "`EmailFornedor` TEXT NOT NULL," +
+              "`LocalidadeFornecedor` TEXT NOT NULL," +
+              "PRIMARY KEY('idFornecedor' AUTOINCREMENT));";
+
+            SqliteCommand cmd = DB.ExecuteCommand(command);
+
+            cmd.Connection.Open();
+
+            cmd.ExecuteNonQuery();
+
+            cmd.Connection.Close();
+        }
+
+        public static void Produtos()
+        {
+            string command = "CREATE TABLE IF NOT EXISTS `Produto` (" +
+                "`idProduto` INTEGER NOT NULL UNIQUE," +
+                "`idCodBarProduto` INTEGER NOT NULL," +
+                "`DescricaoProduto` TEXT NOT NULL," +
+                "`idFornecedor` INTEGER NOT NULL," +
+                "`EstoqueProduto` INTEGER NOT NULL," +
+                "`EstoqueMinimoProduto` INTEGER NOT NULL," +
+                "`ValorCustoProduto` NUMERIC(8,2) NOT NULL," +
+                "`ValorVendaVarejoProduto` NUMERIC(8,2) NOT NULL," +
+                "`ValorVendaAtacadoProduto` NUMERIC(8,2) NOT NULL," +
+                "'QuantidadeMinimaAtacado' INTEGER NOT NULL," +
+                "`idCategoria` INTEGER NOT NULL," +
+                "`AtivoProduto` TEXT NOT NULL," +
+                "`FabricanteProduto` TEXT NOT NULL," +
+                "`ModeloProduto` TEXT NOT NULL," +
+                "`ObservacaoProduto` TEXT NOT NULL," +
+                "`DataCadastroProduto` TEXT NOT NULL," +
+                "PRIMARY KEY('idProduto' AUTOINCREMENT));";
+
+            SqliteCommand cmd = DB.ExecuteCommand(command);
+
+            cmd.Connection.Open();
+
+            cmd.ExecuteNonQuery();
+
+            cmd.Connection.Close();
+        }
     }
 }

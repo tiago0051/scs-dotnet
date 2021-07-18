@@ -42,7 +42,8 @@ namespace Sistema_Caixa_Seguro.Classes
             if (identificacao != "")
             {
                 Object[] o = Util.ExecuteMySqlDataReader("SELECT * FROM cliente  inner join servico ON cliente.idServico = servico.idServico WHERE identificacaoCliente='" + identificacao + "'");
-                if (o != null)
+                if (o != null && ((MySqlConnection)o[0]).State != System.Data.ConnectionState.Closed && 
+                    ((MySqlConnection)o[0]).State != System.Data.ConnectionState.Broken)
                 {
                     var reader = (MySqlDataReader)o[1];
                     reader.Read();
@@ -66,7 +67,8 @@ namespace Sistema_Caixa_Seguro.Classes
                 }
                 else
                 {
-
+                    if (NaoVencido())
+                        return true;
                 }
             }
             return false;
@@ -113,7 +115,7 @@ namespace Sistema_Caixa_Seguro.Classes
             return false;
         }
 
-        private static string Encrypt(String textToEncrypt)
+        public static string Encrypt(String textToEncrypt)
         {
             byte[] keyArray;
             byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(textToEncrypt);
